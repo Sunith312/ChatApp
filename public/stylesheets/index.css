@@ -1,0 +1,12 @@
+.my-flex-container {
+    border: 2px solid green;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.my-flex-item {
+    border: 2px solid red;
+    height: auto;
+    width: 50%;
+}

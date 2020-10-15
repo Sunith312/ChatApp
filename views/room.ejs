@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="stylesheets/room.css">
+  <title>Chat</title>
+  <script type="text/javascript">
+    const roomName = "<%= room.name %>";
+    const userName = "<%= room.users %>";
+    const videoRoom = "<%= room.videoId %>";
+  </script>
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer src="scripts/chatscript.js"></script>
+</head>
+
+<body>
+    <div id="message-container" class="border"></div>
+    <form id="send-container">
+      <input type="text" id="message-input" class="border form-control">
+      <button type="submit" id="send-button" class="btn btn-success"><i class="fa fa-paper-plane"
+          aria-hidden="true"></i></button>
+    </form>
+    <form id="videoform" action="/<%= room.name %>/video" method="get"><button type="submit" class="btn btn-primary"><i
+          class="fa fa-video-camera" aria-hidden="true"></i></button></form>
+</body>
+
+</html>

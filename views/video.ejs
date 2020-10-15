@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/stylesheets/video.css">
+    <script>
+        const ROOM_NAME = "<%= room.name %>";
+        const VIDEO_ID = "<%= room.videoId %>";
+    </script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/scripts/videoscript.js" defer></script>
+    <title>Video</title>
+</head>
+
+<body>
+    <div class="frame border row h-100">
+        <div class="video-container text-center border col-12">
+            <h1 class="display-3" align="center"><u><%= room.name %></u></h1>
+            <div id="video-grid"></div>
+        </div>
+        <!-- <div class="chat-container col-2 p-0 border">
+            <div class="chat border p-2">
+                <div id="message-container"></div>
+
+                <div class="sent border w-75 alert alert-primary">
+                    <label for=""><b>Sunith : </b></label>
+                    <p> dasdasdasasdasdasdas</p>
+                    <span style="font-size: small;"><i>11:00 | 20/10</i></span>
+                </div>
+
+                <div class="reply pull-right border w-75 alert alert-info">
+                    <label for=""><b>Sunith : </b></label>
+                    <p> dasdasdasasdasdasdas</p>
+                    <span style="font-size: small;"><i>11:00 | 20/10</i></span>
+                </div>
+            </div>
+            <div>
+                <form id="send-container">
+                    <div class="form-group m-auto">
+                        <input type="text" class="text-box form-control pull-left" id="">
+                        <button class="btn btn-success pull-left">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div> -->
+    </div>
+</body>
+
+</html>
